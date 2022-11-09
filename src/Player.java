@@ -15,6 +15,13 @@ public class Player {
     private int intelligence; //how well a player can cast a spell
 
     //constructor(s), how to create new Players
+    public Player(String name, int health, int dexterity, int strength, int intelligence) {
+        this.name = name;
+        this.health = health;
+        this.dexterity = dexterity;
+        this.strength = strength;
+        this.intelligence = intelligence;
+    }
 
     //methods, actions
     public String getName() {
@@ -55,5 +62,13 @@ public class Player {
 
     public void setIntelligence(int intelligence) {
         this.intelligence = intelligence;
+    }
+
+    public String toString() {
+        return name + "\n" + "----------------------" + "\n" +
+                "Health: " + health + "\n" +
+                "Intelligence: " + intelligence + "\n" +
+                "Dexterity: " + dexterity + "\n" +
+                "Strength: " + strength;
     }
 }
